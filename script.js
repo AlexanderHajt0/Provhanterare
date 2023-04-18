@@ -8,5 +8,6 @@ for (var i = 0; i < dataPairs.length; i++) {
   console.log(dataPairs[i]);
   let keyPair = dataPairs[i].split("=");
   console.log("input" + keyPair[0]);
-  document.getElementById("input" + keyPair[0]).textContent += " " + keyPair[1];
+  keyPair[1] = keyPair[1].replace(/[+]/g," ");
+  document.getElementById("input" + keyPair[0]).textContent += keyPair[1];
 }
